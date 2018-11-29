@@ -101,10 +101,10 @@ START_TEST(test_2d_area)
   a.y = b.y = 0;
   c.x = 2.5;
   c.y = 5;
-  ck_assert(coord_2d_area_triangle(&a, &b, &c) == 12.5);
+  ck_assert(abs(coord_2d_area_triangle(&a, &b, &c) - 12.5) < 0.1);
 
 }
-
+END_TEST
 /* coord_2d_midpoint Test */
 START_TEST(test_2d_midpoint)
 {
